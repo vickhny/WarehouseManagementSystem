@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "afdcb19a-df08-4c36-af8e-b60ab93b929e",
+		"name": "WarehouseServiceAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Articles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "articles",
+							"type": "file",
+							"src": "/Users/vikashkumar/Downloads/practice test/inventory.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/ingka/uploadArticles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ingka",
+						"uploadArticles"
+					]
+				},
+				"description": "Use valid json file to upload articles."
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "products",
+							"type": "file",
+							"src": "/Users/vikashkumar/Downloads/practice test/products.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/ingka/uploadProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ingka",
+						"uploadProducts"
+					]
+				},
+				"description": "Use valid json file to upload products."
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/ingka/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ingka",
+						"getAllProducts"
+					]
+				},
+				"description": "Get list of all products."
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productName",
+							"value": "Dining Chair",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/ingka/sellProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ingka",
+						"sellProduct"
+					]
+				},
+				"description": "Provide valid product name to sell product."
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product with name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "query",
+							"value": "Din",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/ingka/searchProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ingka",
+						"searchProduct"
+					]
+				},
+				"description": "Provide valid product name to sell product."
+			},
+			"response": []
+		},
+		{
+			"name": "Get avaiable stock of articles.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8090/ingka/getArticleStock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ingka",
+						"getArticleStock"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
